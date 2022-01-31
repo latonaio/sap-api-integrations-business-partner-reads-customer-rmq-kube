@@ -182,39 +182,29 @@ func (c *SAPAPICaller) AsyncGetBPCustomer(businessPartner, businessPartnerRole, 
 }
 ```
 ## Output  
-本マイクロサービスでは、[golang-logging-library](https://github.com/latonaio/golang-logging-library) により、以下のようなデータがJSON形式で出力されます。  
+本マイクロサービスでは、[golang-logging-library-for-sap](https://github.com/latonaio/golang-logging-library-for-sap) により、以下のようなデータがJSON形式で出力されます。  
 以下の sample.json の例は、ビジネスパートナ得意先 の 得意先データ が取得された結果の JSON の例です。  
 以下の項目のうち、"Customer" ～ "to_CustomerCompany" は、/SAP_API_Output_Formatter/type.go 内 の Type Customer {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
 
 ```
 {
-	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-business-partner-reads-customer/SAP_API_Caller/caller.go#L350",
-	"function": "sap-api-integrations-business-partner-reads-customer/SAP_API_Caller.(*SAPAPICaller).Customer",
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-business-partner-reads-customer/SAP_API_Caller/caller.go#L324",
+	"function": "sap-api-integrations-business-partner-reads-customer/SAP_API_Caller.(*SAPAPICaller).Address",
 	"level": "INFO",
 	"message": [
 		{
-			"Customer": "1000140",
-			"AuthorizationGroup": "",
-			"BillingIsBlockedForCustomer": "",
-			"CreationDate": "/Date(1527206400000)/",
-			"CustomerAccountGroup": "CUST",
-			"CustomerClassification": "",
-			"CustomerFullName": "Company Cust10/06037 Berlin",
-			"CustomerName": "Cust10",
-			"DeliveryIsBlocked": "",
-			"OrderIsBlockedForCustomer": "",
-			"PostingIsBlocked": false,
-			"Supplier": "",
-			"CustomerCorporateGroup": "",
-			"Industry": "",
-			"TaxNumber1": "",
-			"DeletionIndicator": false,
-			"CityCode": "",
-			"County": "",
-			"to_CustomerSalesArea": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_Customer('1000140')/to_CustomerSalesArea",
-			"to_CustomerCompany": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_Customer('1000140')/to_CustomerCompany"
+			"BusinessPartner": "1000140",
+			"AddressID": "27518",
+			"ValidityStartDate": "",
+			"ValidityEndDate": "",
+			"Country": "US",
+			"Region": "CT",
+			"StreetName": "farmington ave",
+			"CityName": "Berlin",
+			"PostalCode": "06037",
+			"Language": "EN"
 		}
 	],
-	"time": "2021-12-20T20:54:27.056722+09:00"
+	"time": "2022-01-27T21:55:30+09:00"
 }
 ```
