@@ -5,7 +5,7 @@ import (
 	sap_api_input_reader "sap-api-integrations-business-partner-reads-customer-rmq-kube/SAP_API_Input_Reader"
 	"sap-api-integrations-business-partner-reads-customer-rmq-kube/config"
 
-	"github.com/latonaio/golang-logging-library/logger"
+	"github.com/latonaio/golang-logging-library-for-sap/logger"
 	rabbitmq "github.com/latonaio/rabbitmq-golang-client"
 	"golang.org/x/xerrors"
 )
